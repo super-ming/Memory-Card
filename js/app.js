@@ -1,12 +1,22 @@
-let card1front = document.getElementById("card1-front");
-let card1back = document.getElementById("card1-back");
+let cardfront = document.querySelectorAll(".card-front");
+let cardback = document.querySelectorAll(".card-back");
+let gameboard = document.getElementById("game-board");
+let stack = document.querySelectorAll(".stack");
+let cards = gameboard.childNodes;
+let clicked = [];
 
-card1front.addEventListener("click", function(){
-    card1front.classList.toggle('card-closer');
-    setTimeout(function (){
-        card1front.classList.toggle('hide');
-    }, 10);
-    setTimeout(function (){
-        card1back.classList.toggle('hide');
-    }, 300);
+cards.forEach(function(card){
+    card.addEventListener("click", function(){
+        let nextCard = card.nextElementSibling;
+        let nextId = card.nextElementSibling.id;
+        if (clicked.length < 2 && card.classList.contains('card-close')) {
+            clicked.push(nextId);
+            card.classList.toggle('card-closer');
+            setTimeout(function() {
+                card.classList.toggle('hide');
+                nextCard.classList.toggle('hide');
+                nextCard.classList.toggle('show')
+            }, 400);
+        }
+    });
 });
