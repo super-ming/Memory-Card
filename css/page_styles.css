@@ -29,7 +29,11 @@
     margin: 5px;
     text-align: center;
     border-radius: 5px;
-    display: none;
+}
+
+.card-open > i {
+    position: relative;
+    top: 42%;
 }
 
 .card-closer {

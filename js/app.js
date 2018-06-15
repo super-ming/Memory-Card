@@ -16,7 +16,7 @@ cards.forEach(function(card){
                 card.classList.toggle('hide');
                 nextCard.classList.toggle('hide');
                 nextCard.classList.toggle('show')
-            }, 400);
+            }, 300);
         }
     });
 });

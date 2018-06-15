@@ -15,3 +15,5 @@ https://stackoverflow.com/questions/35969974/foreach-is-not-a-function-error-wit
 https://www.lifewire.com/absolute-vs-relative-3466208
 https://tfrommen.de/emmet-speed-up-your-markup/
 https://www.w3schools.com/Jsref/met_win_settimeout.asp
+https://gomakethings.com/how-to-add-transition-animations-to-vanilla-javascript-show-and-hide-methods/
+https://css-tricks.com/snippets/javascript/loop-queryselectorall-matches/
