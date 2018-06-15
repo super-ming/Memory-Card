@@ -17,3 +17,8 @@ https://tfrommen.de/emmet-speed-up-your-markup/
 https://www.w3schools.com/Jsref/met_win_settimeout.asp
 https://gomakethings.com/how-to-add-transition-animations-to-vanilla-javascript-show-and-hide-methods/
 https://css-tricks.com/snippets/javascript/loop-queryselectorall-matches/
+https://stackoverflow.com/questions/19124255/center-icon-in-a-div-horizontally-and-vertically
+https://www.w3schools.com/Jsref/dom_obj_all.asp
+https://fontawesome.com/how-to-use/svg-with-js#additional-styling
+https://stackoverflow.com/questions/19706749/css3-rotate3d-animation-repeating
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d
