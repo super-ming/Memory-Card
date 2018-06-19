@@ -18,7 +18,7 @@
     margin: 5px;
     text-align: center;
     border-radius: 5px;
-    z-index: 2;
+    z-index: 1;
     backface-visibility: hidden;
 }
 
@@ -31,10 +31,9 @@
     border-radius: 5px;
 }
 
-.card-open > i {
+.flip {
     position: relative;
     top: 42%;
-
 }
 
 .card-closer {
@@ -52,7 +51,46 @@
 }
 
 .matched {
-    transform: rotateZ(360deg);
-    transition-duration: 2s;
+    transform: rotateX(360deg);
+    transition-duration: 1.2s;
     transform-style: preserve-3d;
+}
+
+#moves-counter {
+    width: 100px;
+    height: 25px;
+    background-color: orange;
+}
+
+#winner {
+    display: none;
+    position: fixed;
+    width:80%;
+    height: 50%;
+    margin: auto;
+    z-index: 3;
+    padding-top: 100px;
+    background-color: rgba(0,0,0,0.4);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.modal-close {
+    float: right;
+    font-size: 30px;
+    color: rgb(68, 10, 74);
+    width: 80%;
+    height: 80%;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }

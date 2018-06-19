@@ -22,3 +22,9 @@ https://www.w3schools.com/Jsref/dom_obj_all.asp
 https://fontawesome.com/how-to-use/svg-with-js#additional-styling
 https://stackoverflow.com/questions/19706749/css3-rotate3d-animation-repeating
 https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d
+https://www.w3schools.com/jsref/prop_style_top.asp
+https://getflywheel.com/layout/css3-transitions-transforms-create-animations/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+https://www.w3schools.com/js/js_object_constructors.asp
+https://stackoverflow.com/questions/41764061/adding-text-to-an-existing-text-element-in-javascript-via-dom
+https://www.w3schools.com/howto/howto_css_modals.asp
