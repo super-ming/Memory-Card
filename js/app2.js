@@ -22,6 +22,10 @@ function getIcon(element) {
   return element.firstElementChild.firstElementChild.getAttribute("class");
 }
 
+function matchCard(oneCard, anotherCard){
+    return (getIcon(oneCard) === getIcon(anotherCard));
+}
+
 function matchedEffect(element){
     addClass(element, 'fa-spin', 'fa-2x');
     addClass(element.parentElement, 'matched');
@@ -49,7 +53,7 @@ gameboard.addEventListener("click", (e) => {
   openedCards.push(cardFrontSide);
   if (openedCards.length == 2){
       let [firstCard, secondCard] = openedCards;
-      if (getIcon(firstCard) === getIcon(secondCard)) {
+      if (matchCard(firstCard, secondCard)) {
           matchedCards.push(openedCards);
           matchedEffect(firstCard.firstElementChild.firstElementChild);
           setTimeout(()=> {
@@ -68,13 +72,28 @@ gameboard.addEventListener("click", (e) => {
     openedCards = [];
   }
 
+  if (moves >= 10 && matchedCards.length < 4){
+      let star3 = document.getElementById("star3");
+      removeClass(star3, "checked");
+  };
+
+  if (moves >= 16 && matchedCards.length < 5){
+      let star2 = document.getElementById("star2");
+      removeClass(star2, "checked");
+  };
+
+  if (moves >= 22 && matchedCards.length < 6){
+      let star1 = document.getElementById("star1");
+      removeClass(star1, "checked");
+  };
+
   if (matchedCards.length == 8) {
       setTimeout(()=> {
-          modal.style.display = "block";
+          removeClass(modal, "hide");
       }, 500);
   }
 });
 
-modal.addEventListener("click", function(){
+modalClose.addEventListener("click", function(){
     modal.style.display = "none";
 });
