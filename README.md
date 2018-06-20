@@ -28,3 +28,4 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 https://www.w3schools.com/js/js_object_constructors.asp
 https://stackoverflow.com/questions/41764061/adding-text-to-an-existing-text-element-in-javascript-via-dom
 https://www.w3schools.com/howto/howto_css_modals.asp
+https://www.youtube.com/watch?v=tLxBwSL3lPQ&t=

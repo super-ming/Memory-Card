@@ -10,119 +10,121 @@
     <link rel="stylesheet" href="css/page_styles.css">
 </head>
 <body>
-    <div class="container">
-        <div id="header">
-            <span>Memory Game</span>
+    <div id="header">
+        <span>Memory Game</span>
+    </div>
+    <div id="scoreboard">
+        <div id="moves">
+            <p id="moves-counter">Moves: </p>
         </div>
-        <div id= "scoreboard">
-            <div>
-                <p id="moves-counter">Moves: </p>
-            </div>
-            <div id="rating">
-                <span id="star1" class="fa fa-star checked"></span>
-                <span id="star2" class="fa fa-star checked"></span>
-                <span id="star3" class="fa fa-star checked"></span>
+        <div id="rating">
+            <span id="star1" class="fa fa-star checked"></span>
+            <span id="star2" class="fa fa-star checked"></span>
+            <span id="star3" class="fa fa-star checked"></span>
+        </div>
+    </div>
+    <div id="time">
+        <p>Timer</p>
+        <span id="timer"></span>
+    </div>
+    <button class="btn reset">Reset</button>
+    <div id="game-board">
+
+        <div id="card1-back" class="card-close"></div>
+        <div id="card1-front" class="card-open hide">
+            <div class="flip">
+                <i class = "fas fa-trophy trophy fa-lg"></i>
             </div>
         </div>
-        <div id="game-board">
-
-            <div id="card1-back" class="card-close"></div>
-            <div id="card1-front" class="card-open hide">
-                <div class="flip">
-                    <i class = "fas fa-trophy trophy"></i>
-                </div>
+        <div id="card2-back" class="card-close"></div>
+        <div id="card2-front" class="card-open hide">
+            <div class="flip">
+                <i class = "fas fa-trophy trophy fa-lg"></i>
             </div>
-            <div id="card2-back" class="card-close"></div>
-            <div id="card2-front" class="card-open hide">
-                <div class="flip">
-                    <i class = "fas fa-trophy trophy"></i>
-                </div>
+        </div>
+        <div id="card3-back" class="card-close"></div>
+        <div id="card3-front" class="card-open hide">
+            <div class="flip">
+                <i class="fas fa-suitcase suitcase fa-lg"></i>
             </div>
-            <div id="card3-back" class="card-close"></div>
-            <div id="card3-front" class="card-open hide">
-                <div class="flip">
-                    <i class="fas fa-suitcase suitcase"></i>
-                </div>
+        </div>
+        <div id="card4-back" class="card-close"></div>
+        <div id="card4-front" class="card-open hide">
+            <div class="flip">
+                <i class="fas fa-suitcase suitcase fa-lg"></i>
             </div>
-            <div id="card4-back" class="card-close"></div>
-            <div id="card4-front" class="card-open hide">
-                <div class="flip">
-                    <i class="fas fa-suitcase suitcase"></i>
-                </div>
+        </div>
+        <div id="card5-back" class="card-close"></div>
+        <div id="card5-front" class="card-open hide">
+            <div class="flip">
+                <i class="fas fa-thumbs-up thumbs fa-lg"></i>
             </div>
-            <div id="card5-back" class="card-close"></div>
-            <div id="card5-front" class="card-open hide">
-                <div class="flip">
-                    <i class="fas fa-thumbs-up thumbs"></i>
-                </div>
+        </div>
+        <div id="card6-back" class="card-close"></div>
+        <div id="card6-front" class="card-open hide">
+            <div class="flip">
+                <i class="fas fa-thumbs-up thumbs fa-lg"></i>
             </div>
-            <div id="card6-back" class="card-close"></div>
-            <div id="card6-front" class="card-open hide">
-                <div class="flip">
-                    <i class="fas fa-thumbs-up thumbs"></i>
-                </div>
+        </div>
+        <div id="card7-back" class="card-close"></div>
+        <div id="card7-front" class="card-open hide">
+            <div class="flip">
+                <i class="fab fa-sticker-mule mule fa-lg"></i>
             </div>
-            <div id="card7-back" class="card-close"></div>
-            <div id="card7-front" class="card-open hide">
-                <div class="flip">
-                    <i class="fab fa-sticker-mule mule"></i>
-                </div>
+        </div>
+        <div id="card8-back" class="card-close"></div>
+        <div id="card8-front" class="card-open hide">
+            <div class="flip">
+                <i class="fab fa-sticker-mule mule fa-lg"></i>
             </div>
-            <div id="card8-back" class="card-close"></div>
-            <div id="card8-front" class="card-open hide">
-                <div class="flip">
-                    <i class="fab fa-sticker-mule mule"></i>
-                </div>
+        </div>
+        <div id="card9-back" class="card-close"></div>
+        <div id="card9-front" class="card-open hide">
+            <div class="flip">
+                <i class="fab fa-js js fa-lg"></i>
             </div>
-            <div id="card9-back" class="card-close"></div>
-            <div id="card9-front" class="card-open hide">
-                <div class="flip">
-                    <i class="fab fa-js js"></i>
-                </div>
+        </div>
+        <div id="card10-back" class="card-close"></div>
+        <div id="card10-front" class="card-open hide">
+            <div class="flip">
+                <i class="fab fa-js js fa-lg"></i>
             </div>
-            <div id="card10-back" class="card-close"></div>
-            <div id="card10-front" class="card-open hide">
-                <div class="flip">
-                    <i class="fab fa-js js"></i>
-                </div>
+        </div>
+        <div id="card11-back" class="card-close"></div>
+        <div id="card11-front" class="card-open hide">
+            <div class="flip">
+                <i class="fas fa-heart heart fa-lg"></i>
             </div>
-            <div id="card11-back" class="card-close"></div>
-            <div id="card11-front" class="card-open hide">
-                <div class="flip">
-                    <i class="fas fa-heart heart"></i>
-                </div>
+        </div>
+        <div id="card12-back" class="card-close"></div>
+        <div id="card12-front" class="card-open hide">
+            <div class="flip">
+                <i class="fas fa-heart heart fa-lg"></i>
             </div>
-            <div id="card12-back" class="card-close"></div>
-            <div id="card12-front" class="card-open hide">
-                <div class="flip">
-                    <i class="fas fa-heart heart"></i>
-                </div>
+        </div>
+        <div id="card13-back" class="card-close"></div>
+        <div id="card13-front" class="card-open hide">
+            <div class="flip">
+                <i class="fas fa-chess-knight chess fa-lg"></i>
             </div>
-            <div id="card13-back" class="card-close"></div>
-            <div id="card13-front" class="card-open hide">
-                <div class="flip">
-                    <i class="fas fa-chess-knight chess"></i>
-                </div>
+        </div>
+        <div id="card14-back" class="card-close"></div>
+        <div id="card14-front" class="card-open hide">
+            <div class="flip">
+                <i class="fas fa-chess-knight chess fa-lg"></i>
             </div>
-            <div id="card14-back" class="card-close"></div>
-            <div id="card14-front" class="card-open hide">
-                <div class="flip">
-                    <i class="fas fa-chess-knight chess"></i>
-                </div>
+        </div>
+        <div id="card15-back" class="card-close"></div>
+        <div id="card15-front" class="card-open hide">
+            <div class="flip">
+                <i class="fas fa-camera camera fa-lg"></i>
             </div>
-            <div id="card15-back" class="card-close"></div>
-            <div id="card15-front" class="card-open hide">
-                <div class="flip">
-                    <i class="fas fa-camera camera"></i>
-                </div>
+        </div>
+        <div id="card16-back" class="card-close"></div>
+        <div id="card16-front" class="card-open hide">
+            <div class="flip">
+                <i class="fas fa-camera camera fa-lg"></i>
             </div>
-            <div id="card16-back" class="card-close"></div>
-            <div id="card16-front" class="card-open hide">
-                <div class="flip">
-                    <i class="fas fa-camera camera"></i>
-                </div>
-            </div>
-
         </div>
         <div id="winner" class="win-modal hide">
             <div id="winner-message" class="win-content">
