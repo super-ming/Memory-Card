@@ -10,24 +10,27 @@
     <link rel="stylesheet" href="css/page_styles.css">
 </head>
 <body>
-    <div id="header">
-        <span>Memory Game</span>
-    </div>
-    <div id="scoreboard">
+    <header id="header">
+        <h1>Memory Game</h1>
+    </header>
+    <section id="scoreboard">
         <div id="moves">
             <p id="moves-counter">Moves: </p>
         </div>
         <div id="rating">
-            <span id="star1" class="fa fa-star checked"></span>
-            <span id="star2" class="fa fa-star checked"></span>
-            <span id="star3" class="fa fa-star checked"></span>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
         </div>
-    </div>
-    <div id="time">
-        <p>Timer</p>
-        <span id="timer"></span>
-    </div>
-    <button class="btn reset">Reset</button>
+        <div id="time">
+            <p>Timer</p>
+            <span id="timer"></span>
+        </div>
+        <div id="reset">
+            <i class="fas fa-redo-alt fa-lg"></i>
+        </div>
+    </section>
+
     <div id="game-board">
 
         <div id="card1-back" class="card-close"></div>
