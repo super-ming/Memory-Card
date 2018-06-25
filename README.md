@@ -30,3 +30,6 @@ https://stackoverflow.com/questions/41764061/adding-text-to-an-existing-text-ele
 https://www.w3schools.com/howto/howto_css_modals.asp
 https://www.youtube.com/watch?v=tLxBwSL3lPQ&t=
 https://stackoverflow.com/questions/29285897/what-is-the-difference-between-for-in-and-for-of-in-javascript
+https://www.w3schools.com/js/js_timing.asp
+https://fonts.google.com/
+https://css-tricks.com/snippets/css/keyframe-animation-syntax/

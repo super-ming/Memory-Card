@@ -1,23 +1,49 @@
 let gameBoard = document.getElementById('game-board');
 let movesCounter = document.getElementById('moves-counter');
-let modal = document.getElementById('winner');
+let modal = document.getElementById('modal');
 let modalClose = document.querySelector('.modal-close');
-let timer = document.getElementById('timer');
 let reset = document.getElementById('reset');
 let rating = document.getElementById('rating').children;
 let frontCards = document.getElementsByClassName('card-open');
-let cards = gameBoard.children;
+let timer = document.getElementById('timer');
+let win1 = document.getElementById('win1');
+let replay = document.getElementsByName('reset');
 let openedCards = [];
 let matchedCards = [];
 let moves = 0;
+let clockOn = false;
 let time = 0;
+let timeCount;
 
-let clock = setInterval(function () {
-  timeCount();
-}, 1000);
+// increment the variable time by 1 every second to act as a timer
+function startTimer () {
+  timeCount = setInterval(function () {
+    time++;
+    displayClock();
+  }, 1000);
+}
 
-function timeCount () {
-  time++;
+// reset the time to 0
+function resetTimer () {
+  time = 0;
+}
+
+// stop the timer
+function stopTimer () {
+  clearInterval(timeCount);
+}
+
+// display the time in seconds and minutes
+function displayClock () {
+  let seconds = time % 60;
+  // use math.floor to round down the float number from division
+  let minutes = Math.floor(time / 60);
+
+  if (seconds < 10) {
+    timer.innerHTML = `${minutes}:0${seconds}`;
+  } else {
+    timer.innerHTML = `${minutes}:${seconds}`;
+  }
 }
 
 function toggleClass (element, className) {
@@ -51,12 +77,9 @@ function closeCard (card) {
   }, 700);
   setTimeout(() => {
     addClass(card, 'hide');
-    // addClass(second,'hide');
     removeClass(card.previousElementSibling, 'hide');
     removeClass(card.previousElementSibling, 'card-closer');
-    // removeClass(second.previousElementSibling, "hide");
-    // removeClass(second.previousElementSibling, "card-closer");
-  }, 1100);
+  }, 1000);
 }
 
 function openCard (card) {
@@ -79,8 +102,8 @@ function gamePlay (e) {
   movesCounter.textContent = 'Moves: ' + moves;
 
   openCard(cardBackSide);
-
   openedCards.push(cardFrontSide);
+  // if two cards are selected, check if the icons on the cards match
   if (openedCards.length === 2) {
     let [firstCard, secondCard] = openedCards;
     if (matchCard(firstCard, secondCard)) {
@@ -95,59 +118,50 @@ function gamePlay (e) {
     }
     openedCards = [];
   }
+  // if all 8 pairs of cards are matched, stop the game
   if (matchedCards.length === 8) {
-    setTimeout(() => {
-      removeClass(modal, 'hide');
-    }, 500);
+    stopTimer();
+    showStats();
   }
 }
 
+function showStats () {
+  win1.innerHTML = `You did it! You beat the game in ${moves} moves. It only
+  took you ${timer.innerHTML}. Can you do better than that?`;
+  setTimeout(() => {
+    removeClass(modal, 'hide');
+  }, 1000);
+}
+showStats();
+
 function rateGameplay (moves) {
-  if (moves >= 10 && matchedCards.length < 4) {
+  if (moves >= 14 && matchedCards.length < 4) {
     removeClass(rating[2], 'checked');
   };
 
-  if (moves >= 16 && matchedCards.length < 5) {
+  if (moves >= 24 && matchedCards.length < 5) {
     removeClass(rating[1], 'checked');
   };
 
-  if (moves >= 22 && matchedCards.length < 6) {
+  if (moves >= 34 && matchedCards.length < 6) {
     removeClass(rating[0], 'checked');
   };
 }
 
 function shuffleBoard () {
-  //let arr = [];
   let cards = Array.from(document.querySelectorAll('.flip i'));
   let card = document.getElementsByClassName('flip');
-  //console.log(card);
-  //console.log(card[0]);
-  //console.log(card[2]);
-  //for (i = 0; i <= cards; i++) {
-  //  arr.push(cards[i].getAttribute('class'));
-  //}
-  const shuffledCards = shuffle(cards);
-  for (i = 0; i < card.length; i++){
-    console.log(card[i]);
-    card[i].appendChild(shuffledCards[i]);
-  }
-  //for (i in card) {
-    //console.log(card[i]);
-    //for (c in shuffledCards){
-      //console.log(shuffledCards[i]);
-      //let newIcon = document.createElement(shuffledCards[c]);
-      //card[i].parentNode.appendChild(shuffledCards[c]);
-      //tester.removeChild(c);
-      //card[i].appendChild(shuffledCards[c]);
-    //}
-  //}
+  setTimeout(() => {
+    const shuffledCards = shuffle(cards);
+    for (i = 0; i < card.length; i++) {
+      card[i].appendChild(shuffledCards[i]);
+    }
+  }, 1000);
 }
 
-shuffleBoard();
-
-//taken from starter code
+// taken from starter code
 function shuffle (array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
+  let currentIndex = array.length, temporaryValue, randomIndex;
 
   while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
@@ -177,20 +191,36 @@ function gameReset () {
   for (j = 0; j < rating.length; j++) {
     addClass(rating[j], 'checked');
   }
-
 }
-//timer.innerHTML =
+
+shuffleBoard();
 
 gameBoard.addEventListener('click', (e) => {
   gamePlay(e);
   rateGameplay(moves);
+  if (!clockOn) {
+    clockOn = true;
+    startTimer();
+  }
 });
 
 modalClose.addEventListener('click', function () {
   modal.style.display = 'none';
 });
 
+replay[0].addEventListener('click', function () {
+  modal.style.display = 'none';
+  gameReset();
+  shuffleBoard();
+  clockOn = false;
+  stopTimer();
+  resetTimer();
+});
+
 reset.addEventListener('click', function () {
   gameReset();
   shuffleBoard();
+  clockOn = false;
+  stopTimer();
+  resetTimer();
 });
