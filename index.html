@@ -8,16 +8,18 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/page_styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Shrikhand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Shrikhand|Indie+Flower" rel="stylesheet">
 </head>
 <body>
     <header id="header">
         <h1>Memory Game</h1>
     </header>
-    <div class="goodMove">
-      <i class="far fa-thumbs-up fa-2x"></i>
+    <div id="thumbsup">
+      <i class="far fa-thumbs-up fa-3x"></i>
     </div>
-    <i class="far fa-sad-tear"></i>
+    <div id="spinThumbs">
+      <i class="far fa-thumbs-up fa-3x"></i>
+    </div>
     <section id="scoreboard">
         <div id="moves">
             <p id="moves-counter">Moves: </p>
@@ -40,97 +42,97 @@
         <div id="card1-back" class="card-close"></div>
         <div id="card1-front" class="card-open hide">
             <div class="flip">
-                <i class = "fas fa-trophy trophy fa-lg"></i>
+                <i class = "fas fa-trophy trophy fa-lg" data-card="trophy"></i>
             </div>
         </div>
         <div id="card2-back" class="card-close"></div>
         <div id="card2-front" class="card-open hide">
             <div class="flip">
-                <i class = "fas fa-trophy trophy fa-lg"></i>
+                <i class = "fas fa-trophy trophy fa-lg" data-card="trophy"></i>
             </div>
         </div>
         <div id="card3-back" class="card-close"></div>
         <div id="card3-front" class="card-open hide">
             <div class="flip">
-                <i class="fas fa-suitcase suitcase fa-lg"></i>
+                <i class="fas fa-suitcase suitcase fa-lg" data-card="suitcase"></i>
             </div>
         </div>
         <div id="card4-back" class="card-close"></div>
         <div id="card4-front" class="card-open hide">
             <div class="flip">
-                <i class="fas fa-suitcase suitcase fa-lg"></i>
+                <i class="fas fa-suitcase suitcase fa-lg" data-card="suitcase"></i>
             </div>
         </div>
         <div id="card5-back" class="card-close"></div>
         <div id="card5-front" class="card-open hide">
             <div class="flip">
-                <i class="fas fa-thumbs-up thumbs fa-lg"></i>
+                <i class="fas fa-thumbs-up thumbs fa-lg" data-card="thumb"></i>
             </div>
         </div>
         <div id="card6-back" class="card-close"></div>
         <div id="card6-front" class="card-open hide">
             <div class="flip">
-                <i class="fas fa-thumbs-up thumbs fa-lg"></i>
+                <i class="fas fa-thumbs-up thumbs fa-lg" data-card="thumb"></i>
             </div>
         </div>
         <div id="card7-back" class="card-close"></div>
         <div id="card7-front" class="card-open hide">
             <div class="flip">
-                <i class="fab fa-sticker-mule mule fa-lg"></i>
+                <i class="fab fa-sticker-mule mule fa-lg" data-card="mule"></i>
             </div>
         </div>
         <div id="card8-back" class="card-close"></div>
         <div id="card8-front" class="card-open hide">
             <div class="flip">
-                <i class="fab fa-sticker-mule mule fa-lg"></i>
+                <i class="fab fa-sticker-mule mule fa-lg" data-card="mule"></i>
             </div>
         </div>
         <div id="card9-back" class="card-close"></div>
         <div id="card9-front" class="card-open hide">
             <div class="flip">
-                <i class="fab fa-js js fa-lg"></i>
+                <i class="fab fa-js js fa-lg" data-card="js"></i>
             </div>
         </div>
         <div id="card10-back" class="card-close"></div>
         <div id="card10-front" class="card-open hide">
             <div class="flip">
-                <i class="fab fa-js js fa-lg"></i>
+                <i class="fab fa-js js fa-lg" data-card="js"></i>
             </div>
         </div>
         <div id="card11-back" class="card-close"></div>
         <div id="card11-front" class="card-open hide">
             <div class="flip">
-                <i class="fas fa-heart heart fa-lg"></i>
+                <i class="fas fa-heart heart fa-lg" data-card="heart"></i>
             </div>
         </div>
         <div id="card12-back" class="card-close"></div>
         <div id="card12-front" class="card-open hide">
             <div class="flip">
-                <i class="fas fa-heart heart fa-lg"></i>
+                <i class="fas fa-heart heart fa-lg" data-card="heart"></i>
             </div>
         </div>
         <div id="card13-back" class="card-close"></div>
         <div id="card13-front" class="card-open hide">
             <div class="flip">
-                <i class="fas fa-chess-knight chess fa-lg"></i>
+                <i class="fas fa-chess-knight chess fa-lg" data-card="chess-knight"></i>
             </div>
         </div>
         <div id="card14-back" class="card-close"></div>
         <div id="card14-front" class="card-open hide">
             <div class="flip">
-                <i class="fas fa-chess-knight chess fa-lg"></i>
+                <i class="fas fa-chess-knight chess fa-lg" data-card="chess-knight"></i>
             </div>
         </div>
         <div id="card15-back" class="card-close"></div>
         <div id="card15-front" class="card-open hide">
             <div class="flip">
-                <i class="fas fa-camera camera fa-lg"></i>
+                <i class="fas fa-camera camera fa-lg" data-card="camera"></i>
             </div>
         </div>
         <div id="card16-back" class="card-close"></div>
         <div id="card16-front" class="card-open hide">
             <div class="flip">
-                <i class="fas fa-camera camera fa-lg"></i>
+                <i class="fas fa-camera camera fa-lg" data-card="camera"></i>
             </div>
         </div>
         <div id="modal" class="modal">

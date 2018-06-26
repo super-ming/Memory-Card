@@ -26,6 +26,7 @@ function startTimer () {
 // reset the time to 0
 function resetTimer () {
   time = 0;
+  displayClock();
 }
 
 // stop the timer
@@ -58,10 +59,12 @@ function removeClass (element, className) {
   element.classList.remove(className);
 }
 
+// find the dataset for the element
 function getIcon (element) {
-  return element.firstElementChild.firstElementChild.getAttribute('class');
+  return element.firstElementChild.firstElementChild.dataset.card;
 }
 
+// check if the dataset matches
 function matchCard (oneCard, anotherCard) {
   return (getIcon(oneCard) === getIcon(anotherCard));
 }
@@ -94,6 +97,7 @@ function openCard (card) {
 function gamePlay (e) {
   let cardBackSide = e.target;
   let cardFrontSide = cardBackSide.nextElementSibling;
+  // If not clicking on a card, don't make any visual changes
   if (!cardBackSide.classList.contains('card-close')) {
     console.log('Ignore click');
     return;
@@ -134,6 +138,7 @@ function showStats () {
 }
 showStats();
 
+// Reduce the rating as the number of moves increase
 function rateGameplay (moves) {
   if (moves >= 14 && matchedCards.length < 4) {
     removeClass(rating[2], 'checked');
@@ -176,6 +181,7 @@ function shuffle (array) {
 function gameReset () {
   for (i = 0; i < frontCards.length; i++) {
     let front = frontCards[i];
+    // if the card is being shown, close it
     if (front.previousElementSibling.classList.contains('hide')) {
       closeCard(front);
     }

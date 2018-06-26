@@ -11,18 +11,27 @@ body {
     color: rgb(9, 170, 81);
 }
 
-.goodMove {
+#thumbsup {
   z-index: 3;
-  animation: animateleft;
-  animation-duration: 1.5s;
-  animation-timing-function: linear;
+  animation: animateright 1.5s linear;
   height: 100px;
   color: rgb(11, 7, 176);
 }
 
-@keyframes animateleft {
-  from {transform: translateX(0px); opacity: 1}
-  to {transform: translateX(100vw); opacity: 0.2}
+#spinThumbs {
+  animation: spin 1.5s linear;
+  color: rgb(224, 210, 16);
+
+}
+
+@keyframes animateright {
+  from {transform: translateX(0px); opacity: 0}
+  to {transform: translateX(100vw); opacity: 1}
+}
+
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(-180deg);}
 }
 
 #scoreboard {
