@@ -59,12 +59,12 @@ function removeClass (element, className) {
   element.classList.remove(className);
 }
 
-// find the dataset for the element
+// find the data attribute for the element
 function getIcon (element) {
   return element.firstElementChild.firstElementChild.dataset.card;
 }
 
-// check if the dataset matches
+// check if the data attribute matches
 function matchCard (oneCard, anotherCard) {
   return (getIcon(oneCard) === getIcon(anotherCard));
 }
@@ -119,6 +119,11 @@ function gamePlay (e) {
     } else {
       closeCard(firstCard);
       closeCard(secondCard);
+      let thumbsDown = document.getElementById('spinThumbs');
+      thumbsDown.style.animation = 'spin 0.5s linear';
+      thumbsDown.addEventListener('animationend', function () {
+        this.style.animation = '';
+      })
     }
     openedCards = [];
   }
@@ -129,6 +134,8 @@ function gamePlay (e) {
   }
 }
 
+// show the modal with the congratulatory message, number of moves, and the time
+// it took to win the game using template literals
 function showStats () {
   win1.innerHTML = `You did it! You beat the game in ${moves} moves. It only
   took you ${timer.innerHTML}. Can you do better than that?`;
@@ -136,7 +143,6 @@ function showStats () {
     removeClass(modal, 'hide');
   }, 1000);
 }
-showStats();
 
 // Reduce the rating as the number of moves increase
 function rateGameplay (moves) {

@@ -34,3 +34,4 @@ https://www.w3schools.com/js/js_timing.asp
 https://fonts.google.com/
 https://css-tricks.com/snippets/css/keyframe-animation-syntax/
 https://www.youtube.com/watch?v=_rUH-sEs68Y
+https://css-tricks.com/controlling-css-animations-transitions-javascript/

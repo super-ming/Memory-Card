@@ -2,6 +2,11 @@ body {
   font-family: 'Ubuntu', sans-serif;
   background-image: url("black-and-white-262488.jpg");
   background-size: contain;
+  margin: 0px;
+}
+
+h1 {
+  margin-bottom: 0px;
 }
 
 #header {
@@ -11,33 +16,34 @@ body {
     color: rgb(9, 170, 81);
 }
 
-#thumbsup {
+/*#thumbsup {
   z-index: 3;
   animation: animateright 1.5s linear;
   height: 100px;
   color: rgb(11, 7, 176);
-}
+}*/
 
 #spinThumbs {
-  animation: spin 1.5s linear;
-  color: rgb(224, 210, 16);
-
+  position: fixed;
+  color: rgb(11, 7, 176);
+  margin-left: 10%;
 }
 
-@keyframes animateright {
+/*@keyframes animateright {
   from {transform: translateX(0px); opacity: 0}
   to {transform: translateX(100vw); opacity: 1}
-}
+}*/
 
 @keyframes spin {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(-180deg);}
+  from {transform: rotateZ(0deg);}
+  to {transform: rotateZ(180deg);}
 }
 
 #scoreboard {
     width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items:center;
     align-self: center;
     justify-content: space-around;
@@ -61,6 +67,7 @@ body {
 #time {
     width: 40px;
     margin: 15px 25px 15px 15px;
+    color: rgb(240, 11, 86);
 }
 
 #reset {
@@ -69,6 +76,7 @@ body {
     width: 50px;
     height: 30px;
     margin-right: 20%;
+    color: rgb(239, 247, 19);
 }
 
 #reset:hover {
@@ -79,11 +87,11 @@ body {
     background-color: blue;
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
-    height: 47vw;
+    width: 40%;
+    height: 40vw;
     perspective: 1000px;
     position: relative;
-    padding: 20px;
+    padding: 10px;
     flex-direction: row;
     justify-content: center;
     margin-left: auto;
@@ -93,8 +101,8 @@ body {
 
 .card-close {
     background-color: red;
-    width: 20%;
-    height: 20%;
+    width: 19%;
+    height: 19%;
     margin: 10px;
     text-align: center;
     border-radius: 5px;
@@ -105,8 +113,8 @@ body {
 
 .card-open{
     background-color: yellow;
-    width: 20%;
-    height: 20%;
+    width: 19%;
+    height: 19%;
     margin: 10px;
     text-align: center;
     border-radius: 5px;
@@ -123,6 +131,12 @@ body {
 	transform: rotateY(360deg);
   transition-duration: 0.4s;
 	transform-style: preserve-3d;
+}
+
+@keyframes pulsate {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
 }
 
 .show {
@@ -161,6 +175,7 @@ body {
 #winner-message {
     width: 95%;
     height: auto;
+    top: 40%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -184,12 +199,13 @@ button {
 .modal-close {
     float: right;
     font-size: 30px;
-    color: rgb(68, 10, 74);
+    color: rgb(22, 74, 10);
     width: 5%;
     height: 80%;
     position: absolute;
     top: 0;
     right: 0;
+    margin-right: 5px;
 }
 
 .modal-close:hover,
