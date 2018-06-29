@@ -12,36 +12,36 @@
   <link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
 <body>
-    <header id="header">
+    <header id="header" class="header">
         <h1>Memory Game</h1>
     </header>
-    <section id="scoreboard">
-        <div id="moves">
+    <section id="scoreboard" class="score-board">
+        <div id="moves" class="moves">
             <p id="moves-counter">Moves: </p>
         </div>
-        <div id="rating">
+        <div id="rating" class="rating">
             <i class="fa fa-star checked"></i>
             <i class="fa fa-star checked"></i>
             <i class="fa fa-star checked"></i>
         </div>
         <div>
-          <i  id="spinThumbs" class="far fa-thumbs-up fa-2x"></i>
+          <i id="spinThumbs" class="spinThumbs far fa-thumbs-up fa-2x"></i>
         </div>
-        <div id="time">
+        <div id="time"class="time">
             <span id="timer">00:00</span>
         </div>
-        <div id="reset">
+        <div id="reset" class="reset">
             <i class="fas fa-redo-alt fa-lg"></i>
         </div>
     </section>
     <div id="modal" class="modal hide">
-        <div id="winner-message" class="win-content">
+        <div id="winner-message" class="win-msg">
             <span class="modal-close">&times;</span>
-            <p id= "win1"></p>
+            <p id= "message-content" class="message-content"></p>
             <button type="button" name="reset">Yes!</button>
         </div>
     </div>
-    <section id="game-board">
+    <section id="game-board" class="game-board">
         <div id="card1-back" class="card-close"></div>
         <div id="card1-front" class="card-open hide">
             <div class="flip">

@@ -6,7 +6,7 @@ let reset = document.getElementById('reset');
 let rating = document.getElementById('rating').children;
 let frontCards = document.getElementsByClassName('card-open');
 let timer = document.getElementById('timer');
-let win1 = document.getElementById('win1');
+let messageContent = document.getElementById('message-content');
 let replay = document.getElementsByName('reset');
 let openedCards = [];
 let matchedCards = [];
@@ -130,6 +130,10 @@ function gamePlay (e) {
     openedCards = [];
   }
   // if all 8 pairs of cards are matched, stop the game
+  checkCardMatch();
+}
+
+function checkCardMatch () {
   if (matchedCards.length === 8) {
     stopTimer();
     showStats();
@@ -139,7 +143,7 @@ function gamePlay (e) {
 // show the modal with the congratulatory message, number of moves, and the time
 // it took to win the game using template literals
 function showStats () {
-  win1.innerHTML = `You did it! You beat the game in ${moves} moves. It only
+  messageContent.innerHTML = `You did it! You beat the game in ${moves} moves. It only
   took you ${timer.innerHTML}. Can you do better than that?`;
   setTimeout(() => {
     removeClass(modal, 'hide');
@@ -175,7 +179,6 @@ function shuffleBoard () {
 // taken from starter code
 function shuffle (array) {
   let currentIndex = array.length, temporaryValue, randomIndex;
-
   while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
@@ -192,6 +195,7 @@ function gameReset () {
     // if the card is being shown, close it
     if (front.previousElementSibling.classList.contains('hide')) {
       closeCard(front);
+      front.style.backgroundColor = 'yellow';
     }
     let icons = document.getElementsByClassName('fa-lg');
     if (icons[i].classList.contains('fa-spin')) {
@@ -205,6 +209,8 @@ function gameReset () {
   for (j = 0; j < rating.length; j++) {
     addClass(rating[j], 'checked');
   }
+  openedCards = [];
+  matchedCards = [];
 }
 
 shuffleBoard();
@@ -225,10 +231,10 @@ modalClose.addEventListener('click', function () {
 replay[0].addEventListener('click', function () {
   modal.style.display = 'none';
   gameReset();
-  shuffleBoard();
   clockOn = false;
   stopTimer();
   resetTimer();
+  shuffleBoard();
 });
 
 reset.addEventListener('click', function () {
