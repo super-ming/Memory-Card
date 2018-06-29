@@ -33,18 +33,6 @@ h1 {
   margin-left: 10%;
 }
 
-/*#thumbsup {
-  z-index: 3;
-  animation: animateright 1.5s linear;
-  height: 100px;
-  color: rgb(11, 7, 176);
-}*/
-
-/*@keyframes animateright {
-  from {transform: translateX(0px); opacity: 0}
-  to {transform: translateX(100vw); opacity: 1}
-}*/
-
 @keyframes spin {
   from {transform: rotateZ(0deg);}
   to {transform: rotateZ(180deg);}
