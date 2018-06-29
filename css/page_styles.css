@@ -86,7 +86,7 @@ h1 {
 }
 /* gameboard */
 .game-board {
-    background-color: rgb(27, 210, 69);
+    background-color: rgb(148, 181, 156);
     display: flex;
     flex-wrap: wrap;
     width: 40%;
