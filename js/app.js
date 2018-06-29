@@ -114,6 +114,7 @@ function gamePlay (e) {
     let [firstCard, secondCard] = openedCards;
     if (matchCard(firstCard, secondCard)) {
       matchedCards.push(openedCards);
+      thumbsUp(e);
       matchedEffect(firstCard.firstElementChild.firstElementChild);
       setTimeout(() => {
         matchedEffect(secondCard.firstElementChild.firstElementChild);
@@ -121,16 +122,28 @@ function gamePlay (e) {
     } else {
       closeCard(firstCard);
       closeCard(secondCard);
-      let thumbsDown = document.getElementById('spinThumbs');
-      thumbsDown.style.animation = 'spin 0.5s linear';
-      thumbsDown.addEventListener('animationend', function () {
-        this.style.animation = '';
-      });
+      thumbsDown(e);
     }
     openedCards = [];
   }
   // if all 8 pairs of cards are matched, stop the game
   checkCardMatch();
+}
+
+function thumbsDown (e) {
+  let thumbsDown = document.getElementById('thumbsUp');
+  thumbsDown.style.animation = 'spin 0.5s linear';
+  thumbsDown.addEventListener('animationend', function () {
+    this.style.animation = '';
+  });
+}
+
+function thumbsUp (e) {
+  let thumbsUp = document.getElementById('thumbsUp');
+  thumbsUp.style.animation = 'pulsate 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955)';
+  thumbsUp.addEventListener('animationend', function () {
+    this.style.animation = '';
+  });
 }
 
 function checkCardMatch () {
@@ -156,11 +169,11 @@ function rateGameplay (moves) {
     removeClass(rating[2], 'checked');
   };
 
-  if (moves >= 24 && matchedCards.length < 5) {
+  if (moves >= 28 && matchedCards.length < 5) {
     removeClass(rating[1], 'checked');
   };
 
-  if (moves >= 34 && matchedCards.length < 6) {
+  if (moves >= 42 && matchedCards.length < 6) {
     removeClass(rating[0], 'checked');
   };
 }

@@ -14,7 +14,7 @@
     margin: 0 0 0 0;
   }
 
-  .spinThumbs {
+  .thumbsUp {
     position: static;
     margin-left: 5%;
   }
@@ -80,7 +80,7 @@
     width: 55px;
   }
 
-  .spinThumbs {
+  .thumbsUp {
     position: static;
     margin-left: 5%;
   }
@@ -153,7 +153,7 @@
     margin: 0 15px 0 -15px;
   }
 
-  .spinThumbs {
+  .thumbsUp {
     margin: 0 1% 0 1%;
     position: relative;
   }
@@ -220,7 +220,7 @@
     margin: 0 25px 0 0;
   }
 
-  .spinThumbs {
+  .thumbsUp {
     margin: 0 1% 0 1%;
     top: auto;
     position: relative;
@@ -288,7 +288,7 @@
     margin: 0 15px 0 0;
   }
 
-  .spinThumbs {
+  .thumbsUp {
     margin: 0 1% 0 1%;
     top: auto;
     position: relative;
@@ -380,7 +380,7 @@
     margin: 0 0 0 -4%;
   }
 
-  .spinThumbs {
+  .thumbsUp {
     margin: 0 0 5px -2%;
     top: auto;
     position: relative;
