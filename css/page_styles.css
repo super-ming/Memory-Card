@@ -13,7 +13,24 @@ h1 {
     width: 100%;
     text-align: center;
     font-family: 'Shrikhand', cursive;
-    color: rgb(9, 170, 81);
+    color: rgb(10, 195, 93);
+    text-shadow: 2px 2px rgb(1, 139, 16);
+}
+/* scoreboard */
+#scoreboard {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    align-self: center;
+    justify-content: space-around;
+}
+
+#spinThumbs {
+  position: fixed;
+  color: rgb(11, 7, 176);
+  margin-left: 10%;
 }
 
 /*#thumbsup {
@@ -23,12 +40,6 @@ h1 {
   color: rgb(11, 7, 176);
 }*/
 
-#spinThumbs {
-  position: fixed;
-  color: rgb(11, 7, 176);
-  margin-left: 10%;
-}
-
 /*@keyframes animateright {
   from {transform: translateX(0px); opacity: 0}
   to {transform: translateX(100vw); opacity: 1}
@@ -37,16 +48,6 @@ h1 {
 @keyframes spin {
   from {transform: rotateZ(0deg);}
   to {transform: rotateZ(180deg);}
-}
-
-#scoreboard {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items:center;
-    align-self: center;
-    justify-content: space-around;
 }
 
 #moves {
@@ -76,15 +77,15 @@ h1 {
     width: 50px;
     height: 30px;
     margin-right: 20%;
-    color: rgb(239, 247, 19);
+    color: rgb(155, 158, 30);
 }
 
 #reset:hover {
     color: rgb(201, 7, 204);
 }
-
+/* gameboard */
 #game-board {
-    background-color: blue;
+    background-color: rgb(27, 210, 126);
     display: flex;
     flex-wrap: wrap;
     width: 40%;
@@ -100,7 +101,7 @@ h1 {
 }
 
 .card-close {
-    background-color: red;
+    background-color: rgb(18, 219, 141);
     width: 19%;
     height: 19%;
     margin: 10px;
@@ -109,6 +110,7 @@ h1 {
     z-index: 1;
     backface-visibility: hidden;
     box-shadow: 5px 5px rgba(48, 72, 128, 0.77);
+    border: 2px solid rgb(11, 157, 39);
 }
 
 .card-open{
@@ -119,6 +121,7 @@ h1 {
     text-align: center;
     border-radius: 5px;
     box-shadow: 5px 5px rgba(48, 72, 128, 0.77);
+    border: 2px solid rgb(11, 157, 39);
 }
 
 .flip {

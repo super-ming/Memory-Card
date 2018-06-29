@@ -1,4 +1,4 @@
-@media only screen and (max-width: 300px) {
+@media only screen and (min-width: 1px) and (max-width: 300px) {
   h1 {
     font-size: 15px;
   }
@@ -6,10 +6,11 @@
   #moves {
     margin-left: 0px;
     font-size: 13px;
+    width: 54px;
   }
 
   #rating: {
-    width: 25px;
+    width: 23px;
     margin: 0px 0px 0px 0px;
   }
 
@@ -19,7 +20,7 @@
   }
 
   #time {
-    margin: 0px 0px 0px 18%;
+    margin: 0px 0px 0px 10%;
   }
 
   #reset {
@@ -29,6 +30,7 @@
   #game-board {
     width: 90%;
     height: 90vw;
+    justify-content: space-between;
   }
 
   .card-close {
@@ -68,8 +70,14 @@
 }
 
 @media only screen and (min-width: 301px) and (max-width: 400px){
+  #header {
+    font-size: 14px;
+  }
+
   #moves {
-    margin-left: 0px;
+    margin-left: 3%;
+    font-size: 13px;
+    width: 55px;
   }
 
   #spinThumbs {
@@ -78,11 +86,17 @@
   }
 
   #rating {
-    margin: 10px 10% 10px 15px;
+    margin: 10px 6% 10px 0px;
   }
 
   #time {
-    margin: 10px 25px 10px 27%;
+    margin: 6px 25px 10px 8%;
+    font-size: 13px;
+  }
+
+  #reset {
+    margin-right: 2%;
+    width: 40px;
   }
 
   #game-board {
@@ -136,7 +150,7 @@
   }
 
   #rating {
-    margin: 0px 15px 0px 0px;
+    margin: 0px 15px 0px -15px;
   }
 
   #spinThumbs {
@@ -150,6 +164,7 @@
 
   #reset {
     margin-right: 0px;
+    margin-top: 5px;
   }
 
   .card-close {
@@ -202,7 +217,7 @@
   }
 
   #rating {
-    margin: 0px 15px 0px 0px;
+    margin: 0px 25px 0px 0px;
   }
 
   #spinThumbs {
@@ -218,6 +233,7 @@
 
   #reset {
     margin-right: 2%;
+    margin-top: 5px;
   }
 
   .card-close {
@@ -285,6 +301,7 @@
 
   #reset {
     margin-right: 2%;
+    margin-top: 10px;
   }
 
   .card-close {
@@ -356,6 +373,7 @@
   #moves {
     margin-left: 9%;
     font-size: 20px;
+    width: auto;
   }
 
   #rating {
@@ -375,6 +393,7 @@
 
   #reset {
     margin-right: 8%;
+    margin-top: 10px;
   }
 
   #win1 {
