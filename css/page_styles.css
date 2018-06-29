@@ -186,6 +186,10 @@ h1 {
   padding: 0 0 10px 10px;
 }
 
+.buttons {
+  display: flex;
+}
+
 button {
   width: 50px;
 }
