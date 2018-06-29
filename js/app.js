@@ -143,8 +143,8 @@ function checkCardMatch () {
 // show the modal with the congratulatory message, number of moves, and the time
 // it took to win the game using template literals
 function showStats () {
-  messageContent.innerHTML = `You did it! You beat the game in ${moves} moves. It only
-  took you ${timer.innerHTML}. Can you do better than that?`;
+  messageContent.innerHTML = `You did it! You beat the game in ${moves} moves.` +
+  `It only took you ${timer.innerHTML}. Can you do better than that?`;
   setTimeout(() => {
     removeClass(modal, 'hide');
   }, 1000);
