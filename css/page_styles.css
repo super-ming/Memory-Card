@@ -39,18 +39,6 @@ h1 {
   to {transform: rotateZ(180deg);}
 }
 
-@keyframes pulsate {
-  0% {
-    transform: scale(.8);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(.8);
-  }
-}
-
 .moves {
     width:80px;
     margin-left: 20%;
@@ -136,12 +124,6 @@ h1 {
 	transform: rotateY(360deg);
   transition-duration: 0.4s;
 	transform-style: preserve-3d;
-}
-
-@keyframes pulsate {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.3); }
-  100% { transform: scale(1); }
 }
 
 .show {
