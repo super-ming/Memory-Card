@@ -108,7 +108,6 @@ h1 {
     height: 19%;
     margin: 10px;
     text-align: center;
-    border-radius: 5px;
     z-index: 1;
     backface-visibility: hidden;
     box-shadow: 3px 3px rgba(48, 72, 128, 0.77);
